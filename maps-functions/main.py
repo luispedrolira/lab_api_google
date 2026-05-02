@@ -13,7 +13,7 @@ def maps_query(request):
             "input": place,
             "inputtype": "textquery",
             "fields": "place_id,name,geometry,formatted_address",
-            "key": "AIzaSyAhgnptNBfTfuSK0rkq6PYy38C9dInTvWI",
+            "key": os.environ.get("MAPS_KEY"),
         }
     )
     return resp.json()
